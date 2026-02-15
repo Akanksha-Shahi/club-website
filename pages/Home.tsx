@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         {/* Background Glow */}
         <div className="absolute inset-0 bg-mesh-gradient pointer-events-none"></div>
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold uppercase tracking-wider mb-8 cursor-default">
             <span className="w-2 h-2 rounded-full bg-red-500"></span>
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           <p className="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 mb-10 leading-relaxed">
             Join the elite coding fraternity of VIT Bhopal. We build projects, host hackathons, and cultivate the next generation of tech leaders.
           </p>
-          
+
           {/* Abstract Code Visualization */}
           <div className="mt-12 relative rounded-xl border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden shadow-2xl mx-auto max-w-5xl group">
             <div className="absolute top-0 left-0 w-full h-8 bg-white/5 border-b border-white/5 flex items-center px-4 gap-2 z-20">
@@ -33,9 +33,9 @@ const Home: React.FC = () => {
               <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
             </div>
             <div className="aspect-[16/9] w-full bg-surface-dark relative">
-              <img 
-                src={IMAGES.hero_code} 
-                alt="Code editor" 
+              <img
+                src={IMAGES.hero_code}
+                alt="Code editor"
                 className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Tall Card: Web Dev */}
             <div className="glass rounded-2xl p-8 col-span-1 md:col-span-1 row-span-1 md:row-span-2 relative overflow-hidden group">
               <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/10 to-transparent group-hover:from-primary/20 transition-all duration-500"></div>
@@ -154,7 +154,7 @@ const Home: React.FC = () => {
                   <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded border border-white/10 z-10">
                     {event.date}
                   </div>
-                  <img src={event.image} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={event.image} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                 </div>
                 <h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">{event.title}</h3>

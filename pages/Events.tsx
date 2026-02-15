@@ -8,7 +8,7 @@ const Events: React.FC = () => {
   return (
     <div className="pt-24 pb-16 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header & Search */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -21,14 +21,14 @@ const Events: React.FC = () => {
               Join workshops, hackathons, and tech talks. Connect with fellow developers and elevate your skills.
             </p>
           </div>
-          
+
           <div className="flex items-center gap-3 w-full md:w-auto">
             <div className="relative group flex-grow md:flex-grow-0">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search className="text-gray-500 group-focus-within:text-primary transition-colors" size={18} />
               </div>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 className="block w-full md:w-64 pl-10 pr-3 py-2 border border-white/10 rounded-lg leading-5 bg-white/5 text-gray-300 placeholder-gray-500 focus:outline-none focus:bg-white/10 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-all"
                 placeholder="Search events..."
               />
@@ -46,11 +46,10 @@ const Events: React.FC = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2 transition-colors ${
-                  activeTab === tab 
-                  ? 'border-primary text-primary' 
-                  : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-300'
-                }`}
+                className={`whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2 transition-colors ${activeTab === tab
+                    ? 'border-primary text-primary'
+                    : 'border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-300'
+                  }`}
               >
                 {tab}
                 {tab === 'Upcoming' && <span className="ml-2 bg-primary/20 text-primary py-0.5 px-2 rounded-full text-xs">3</span>}
@@ -70,10 +69,12 @@ const Events: React.FC = () => {
                     <span className="text-lg leading-none mt-0.5">{event.date.split(' ')[1].replace(',', '')}</span>
                   </div>
                 </div>
-                <img 
-                  src={event.image} 
-                  alt={event.title} 
+                <img
+                  src={event.image}
+                  alt={event.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-5 flex flex-col flex-grow">

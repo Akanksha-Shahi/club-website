@@ -129,7 +129,7 @@ const CountdownTimer: React.FC = () => {
     ];
 
     return (
-        <div className="flex gap-3 md:gap-4">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {blocks.map((b) => (
                 <div key={b.label} className="flex flex-col items-center">
                     <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-black/60 backdrop-blur-sm flex items-center justify-center"
@@ -240,7 +240,8 @@ const BorderlandsPage: React.FC = () => {
                         </span>
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white borderland-glow leading-[0.9]">
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white borderland-glow leading-[0.95]">
+
                         BORDERLAND
                     </h1>
                     <p className="mt-4 text-xl md:text-2xl font-light tracking-wide" style={{ color: ACCENT.primary }}>
@@ -307,10 +308,10 @@ const BorderlandsPage: React.FC = () => {
           SECTION 2 — WHAT IS BORDERLAND
           ============================ */}
             <section id="what" className="relative py-24 md:py-32 px-4">
-                <div className="max-w-5xl mx-auto">
+                <div className="max-w-5xl mx-auto px-4">
                     <SectionTitle tag="The Experience" title="What Is This Game?" />
 
-                    <div className="max-w-3xl mx-auto">
+                    <div className="max-w-3xl mx-auto px-4">
                         <p className="text-gray-300 text-lg leading-relaxed text-center mb-12">
                             <strong className="text-white">Borderland: Survive the Chaos</strong> is a 40–45 minute live survival experience where teams compete under constantly changing chaos rules while playing <span className="font-medium" style={{ color: ACCENT.primary }}>psychological</span> and <span className="text-white font-medium">logical</span> games to earn tokens.
                         </p>
@@ -337,10 +338,11 @@ const BorderlandsPage: React.FC = () => {
           SECTION 3 — 3 LAYERS SYSTEM
           ============================ */}
             <section id="layers" className="relative py-24 md:py-32 px-4">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto px-4">
                     <SectionTitle tag="Core Mechanics" title="The 3 Layers" subtitle="Every moment in Borderland operates across three interconnected systems." />
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
                         {/* Layer 1 — Chaos Room */}
                         <GlowCard accent={ACCENT.primary}>
                             <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={{ background: `linear-gradient(to right, ${ACCENT.primary}, ${ACCENT.dark})` }} />
@@ -524,7 +526,7 @@ const BorderlandsPage: React.FC = () => {
           SECTION 7 — TOKEN ECONOMY
           ============================ */}
             <section id="tokens" className="relative py-24 md:py-32 px-4">
-                <div className="max-w-5xl mx-auto">
+                <div className="max-w-5xl mx-auto px-4">
                     <SectionTitle tag="Economy" title="Token System" subtitle="Every decision costs something. Every risk earns something." />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

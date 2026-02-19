@@ -279,11 +279,24 @@ const BorderlandsPage: React.FC = () => {
                             href={REGISTRATION_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-8 py-3.5 font-bold rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-105"
-                            style={{ border: `1px solid ${ACCENT.border40}`, color: ACCENT.primary }}
-                        >
-                            Register Now
-                        </a>
+                            className="group relative px-8 py-3.5 font-bold rounded-xl overflow-hidden transition-all duration-300 hover:scale-110"
+                            style={{
+                                   background: ACCENT.primary,
+                                   boxShadow: `0 0 25px ${ACCENT.glow}`,
+                                   color: "white"
+                            }}
+                           >
+                            {/* Glow animation */}
+                            <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition duration-300" />
+
+                            {/* Shine sweep */}
+                            <span className="absolute -left-full top-0 h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:left-full transition-all duration-700" />
+
+                            <span className="relative z-10 flex items-center gap-2">
+                                Register Now ✦
+                            </span>
+                     </a>
+
                     </div>
 
                     {/* Countdown */}

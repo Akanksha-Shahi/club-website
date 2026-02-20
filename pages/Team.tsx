@@ -13,6 +13,8 @@ const TeamCard: React.FC<{ member: any, isLarge?: boolean }> = ({ member, isLarg
                     className="w-full h-full object-cover object-top rounded-full
                                filter grayscale group-hover:grayscale-0
                                transition-all duration-500"
+                    loading="lazy"
+                    decoding="async"
                 />
 
             </div>
@@ -103,7 +105,6 @@ const Team: React.FC = () => {
                                         alt={team.lead.name}
                                         className="w-20 h-20 rounded-full object-cover object-top
                                                    mb-4 border-2 border-primary/30"
-
                                         loading="lazy"
                                         decoding="async"
                                     />
